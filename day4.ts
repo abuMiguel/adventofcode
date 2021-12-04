@@ -15,7 +15,6 @@ class CardNum {
     called: boolean;
     row: number;
     col: number;
-    won?: boolean;
 }
 
 type Cards = CardNum[];
