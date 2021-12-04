@@ -8,9 +8,13 @@
   "author": "Joe P",
   "license": "ISC",
   "devDependencies": {
+    "@types/lodash": "^4.14.177",
     "@typescript-eslint/eslint-plugin": "^5.5.0",
     "@typescript-eslint/parser": "^5.5.0",
     "eslint": "^8.3.0",
     "typescript": "^4.5.2"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
   }
 }
