@@ -34,11 +34,28 @@ points.forEach(p => {
     }
 
     // Horizontal line
-    if (p.y1 === p.y2) {
+    else if (p.y1 === p.y2) {
         const largerX = Math.max(p.x1, p.x2);
         const smallerX = Math.min(p.x1, p.x2);
         for (let i = smallerX; i <= largerX; i++) {
             const val = `${i},${p.y1}`;
+            addAndCheckIntersection(val);
+        }
+    }
+
+    // Part 2
+    // Diagon Alley
+    else {
+        const distX = p.x1 - p.x2;
+        const isXIncrementing = distX < 0;
+        const distY = p.y1 - p.y2;
+        const isYIncrementing = distY < 0;
+
+        const loopLength = Math.abs(distX);
+        for(let i = 0; i <= loopLength; i++){
+            const xVal = isXIncrementing ? `${p.x1 + i}` : `${p.x1 - i}`;
+            const yVal = isYIncrementing ? `${p.y1 + i}` : `${p.y1 - i}`;
+            const val = `${xVal},${yVal}`;
             addAndCheckIntersection(val);
         }
     }
