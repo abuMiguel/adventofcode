@@ -1,4 +1,4 @@
-import { day1Input } from "./day1.data";
+import { day1Input } from "./data/day1.data";
 
 const input: number[] = day1Input.split("\n").map(v => +v);
 

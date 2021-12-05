@@ -6,7 +6,7 @@
       "esModuleInterop": true,
       "allowSyntheticDefaultImports": true
     },
-    "include": ["*.ts"],
+    "include": ["*.ts", "data/day5.data.ts", "data/day4.data.ts", "data/day1.data.ts", "data/day3.data.ts", "data/day2.data.ts"],
     "exclude": [
       "node_modules"
     ]

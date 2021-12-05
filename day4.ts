@@ -1,4 +1,4 @@
-import { day4Nums, day4Cards } from "./day4.data";
+import { day4Nums, day4Cards } from "./data/day4.data";
 import _ from "lodash";
 
 const nums: string[] = day4Nums.split(",");

@@ -1,4 +1,4 @@
-import { day5Input } from "./day5.data";
+import { day5Input } from "./data/day5.data";
 
 const input = day5Input.split("\n");
 

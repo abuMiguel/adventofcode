@@ -1,4 +1,4 @@
-import { day3Input } from "./day3.data";
+import { day3Input } from "./data/day3.data";
 
 const input: string[] = day3Input.split("\n");
 

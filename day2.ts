@@ -1,4 +1,4 @@
-import { day2Input } from "./day2.data";
+import { day2Input } from "./data/day2.data";
 
 class pos {
     constructor(d: string, u: number) {
