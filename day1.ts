@@ -1,5 +1,7 @@
 import { day1Input } from "./data/day1.data";
 
+console.time("day1");
+
 const input: number[] = day1Input.split("\n").map(v => +v);
 
 //Part 1
@@ -14,3 +16,4 @@ input.forEach((_, i, arr) => {
     arr[i] + arr[i+1] + arr[i+2] < arr[i+1] + arr[i+2] + arr[i+3] ? windowCount++ : null;
 });
 console.log(`number of window increases: ${windowCount}`);
+console.timeEnd("day1");

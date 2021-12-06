@@ -1,5 +1,7 @@
 import { day2Input } from "./data/day2.data";
 
+console.time("day2");
+
 class pos {
     constructor(d: string, u: number) {
         this.direction = d;
@@ -42,3 +44,4 @@ input.forEach(p => {
     }
 });
 console.log(x*y);
+console.timeEnd("day2");

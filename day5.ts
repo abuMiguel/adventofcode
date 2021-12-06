@@ -1,5 +1,6 @@
 import { day5Input } from "./data/day5.data";
 
+console.time("day5");
 const input = day5Input.split("\n");
 
 class Points {
@@ -67,3 +68,4 @@ points.forEach(p => {
 });
 
 console.log(intersected.size);
+console.timeEnd("day5");

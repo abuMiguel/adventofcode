@@ -1,6 +1,8 @@
 import { day4Nums, day4Cards } from "./data/day4.data";
 import _ from "lodash";
 
+console.time("day4");
+
 const nums: string[] = day4Nums.split(",");
 const cardsInput: string[] = day4Cards.split("\n");
 
@@ -101,3 +103,5 @@ function callNumbers2() {
     }
 }
 callNumbers2();
+
+console.timeEnd("day4");

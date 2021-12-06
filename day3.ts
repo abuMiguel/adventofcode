@@ -1,5 +1,7 @@
 import { day3Input } from "./data/day3.data";
 
+console.time("day3");
+
 const input: string[] = day3Input.split("\n");
 
 class Nums {
@@ -16,12 +18,7 @@ for (let i = 0; i < count; i++) {
 
 input.forEach(s => {
     for (let i = 0; i < s.length; i++) {
-        if (s[i] === '1') {
-            numbers[i].ones++;
-        }
-        else {
-            numbers[i].zeroes++;
-        }
+        s[i] === '1' ? numbers[i].ones++ : numbers[i].zeroes++;
     }
 });
 
@@ -43,12 +40,8 @@ let o2Filter = input;
 for (let i = 0; i < count; i++) {
     const ones: string[] = o2Filter.filter(v => v[i] === "1");
     const zeroes: string[] = o2Filter.filter(v => v[i] === "0");
-    if(ones.length >= zeroes.length){
-        o2Filter = ones;
-    }
-    else{
-        o2Filter = zeroes;
-    }
+    o2Filter = ones.length >= zeroes.length ? ones : zeroes;
+
     if(o2Filter.length === 1){
         break;
     }
@@ -58,12 +51,8 @@ let co2Filter = input;
 for (let i = 0; i < count; i++) {
     const ones: string[] = co2Filter.filter(v => v[i] === "1");
     const zeroes: string[] = co2Filter.filter(v => v[i] === "0");
-    if(ones.length < zeroes.length){
-        co2Filter = ones;
-    }
-    else{
-        co2Filter = zeroes;
-    }
+    co2Filter = ones.length < zeroes.length ? ones : zeroes;
+
     if(co2Filter.length === 1){
         break;
     }
@@ -72,3 +61,4 @@ for (let i = 0; i < count; i++) {
 const oxygenGeneratorRating = parseInt(o2Filter[0], 2);
 const co2ScrubberRating = parseInt(co2Filter[0], 2);
 console.log(`life support rating: ${oxygenGeneratorRating * co2ScrubberRating}`);
+console.timeEnd("day3");
